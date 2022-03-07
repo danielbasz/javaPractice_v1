@@ -9,15 +9,15 @@
 public class OccasionalAction extends Action
 {
    
-	private int month;
+	private int day;
 
 	/**
     Constructs a action with a description.
 	*/
-	public OccasionalAction(String description, int month) {
+	public OccasionalAction(String description, int day) {
 		
 		super(description);
-		this.month = month;
+		this.day = day;
 		
 	}
 
@@ -32,11 +32,9 @@ public class OccasionalAction extends Action
 			 */
 			public boolean occursOn(int day, int month, int year) {
 				
-
-				
-				if (day > 0 && this.month > 0) {
-				
-				return true; 
+				if (day == this.day) {
+					
+					return true; 
 				}
 				else {
 				  return false;

@@ -7,9 +7,11 @@
 
 // YOUR CODE STARTS HERE!!!
 
-public class RareAction extends OccasionalAction
+public class RareAction extends Action
 {
-
+	
+	private int day;
+	private int month;
 	private int year;
 
 
@@ -17,11 +19,12 @@ public class RareAction extends OccasionalAction
 	/**
 	    Constructs a action with a description.
 	 */
-	public RareAction(int day, int month, int year) {
+	public RareAction(String description, int day, int month, int year) {
 
-		super("This is a Rare Action");
-
-
+		super(description);
+		this.day = day;
+		this.month = month;
+		this.year = year;
 	}
 
 
@@ -37,7 +40,7 @@ public class RareAction extends OccasionalAction
 
 
 
-		if (day > 0 && month > 0 && year > 0) {
+		if (day == this.day && month == this.month && year == this.year) {
 
 			return true; 
 		}
