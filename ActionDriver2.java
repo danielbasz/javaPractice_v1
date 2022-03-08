@@ -1,3 +1,4 @@
+import java.lang.reflect.*;
 
 public class ActionDriver2 {
 
@@ -22,6 +23,32 @@ public class ActionDriver2 {
 				//Outputs are expected to be true for Action.class as superclass of RareAction.class
 				System.out.println("RareAction is just a subclass of Action: " + answer);
 				System.out.println("Expected: true");	
+			
+				
+				Field[] fields = OccasionalAction.class.getDeclaredFields();
+				
+				
+				if (fields.length != 0) {
+					answer = false;
+				}
+				
+				System.out.println("OccasionalAction have no extra fields: " + answer);
+				System.out.println("Expected: true");
+				
+				
+				fields = RareAction.class.getDeclaredFields();
+				
+				System.out.println("RareAction have no extra fields: " + answer);
+				System.out.println("Expected: true");
+				
+				
+//				
+//				== Action.class.getDeclaredFields() ) {
+//					System.out.println("true");
+//				}
+//				
+				
+				
 			
 	}
 

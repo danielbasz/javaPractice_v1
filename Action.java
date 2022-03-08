@@ -8,6 +8,9 @@ public abstract class Action
 {
 
 	private String description;
+	private int year;
+	private int month;
+	private int day;
 
 	/**
 Constructs an default action with no description.
@@ -22,9 +25,34 @@ Constructs an default action with no description.
 	 */
 	public Action(String description)
 	{
+		this();
 		this.description = description;
 	}
+	
+	public Action (String description, int day) {
+		this(description);
+		this.day = day;
+	}
+	
+	public Action (String description, int year, int month, int day) {
+		this.description = description;
+		this.year = year;
+		this.month = month;
+		this.day = day;
+	}
 
+	public int getDay() {
+		return day;
+	}
+	
+	public int getMonth() {
+		return month;
+	}
+	
+	public int getYear() {
+		return year;
+	}
+	
 	/**
    Sets the description of this action.
    @param description the text description of the action
@@ -33,6 +61,7 @@ Constructs an default action with no description.
 	{
 		this.description = description;
 	}
+	
 
 
 	/**

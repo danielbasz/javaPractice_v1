@@ -9,15 +9,13 @@
 public class OccasionalAction extends Action
 {
    
-	private int day;
 
 	/**
     Constructs a action with a description.
 	*/
 	public OccasionalAction(String description, int day) {
 		
-		super(description);
-		this.day = day;
+		super(description, day);
 		
 	}
 
@@ -30,9 +28,9 @@ public class OccasionalAction extends Action
 		   @return true if the action activity occurs on the specified date.
 		   @Override Overrides super method
 			 */
-			public boolean occursOn(int day, int month, int year) {
+			public boolean occursOn(int year, int month, int day) {
 				
-				if (day == this.day) {
+				if (day == super.getDay()) {
 					
 					return true; 
 				}

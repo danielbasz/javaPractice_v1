@@ -9,22 +9,14 @@
 
 public class RareAction extends Action
 {
-	
-	private int day;
-	private int month;
-	private int year;
-
-
 
 	/**
 	    Constructs a action with a description.
 	 */
 	public RareAction(String description, int day, int month, int year) {
 
-		super(description);
-		this.day = day;
-		this.month = month;
-		this.year = year;
+		super(description, day, month, year);
+		
 	}
 
 
@@ -36,11 +28,11 @@ public class RareAction extends Action
 			   @return true if the action activity occurs on the specified date.
 			   @Override Overrides super method
 	 */
-	public boolean occursOn(int day, int month, int year) {
+	public boolean occursOn(int year, int month, int day) {
 
 
 
-		if (day == this.day && month == this.month && year == this.year) {
+		if (day == super.getDay() && month == super.getMonth() && year == super.getYear()) {
 
 			return true; 
 		}
