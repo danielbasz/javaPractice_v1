@@ -7,10 +7,10 @@ You are required to complete read and review this code to appropriately fill the
 public abstract class Action
 {
 
-	private String description;
-	private int year;
-	private int month;
-	private int day;
+	protected String description;
+	protected int year;
+	protected int month;
+	protected int day;
 
 	/**
 Constructs an default action with no description.
@@ -41,18 +41,6 @@ Constructs an default action with no description.
 		this.day = day;
 	}
 
-	public int getDay() {
-		return day;
-	}
-	
-	public int getMonth() {
-		return month;
-	}
-	
-	public int getYear() {
-		return year;
-	}
-	
 	/**
    Sets the description of this action.
    @param description the text description of the action
@@ -62,8 +50,6 @@ Constructs an default action with no description.
 		this.description = description;
 	}
 	
-
-
 	/**
    Determines if this action occurs on the specified date.
    @param year the year

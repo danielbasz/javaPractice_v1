@@ -1,19 +1,24 @@
 import java.util.Scanner;
+import java.lang.reflect.*;
 
-//Java program to demonstrate get() method
+// Assignment01 covers the application of java reflection techniques and polymorphism of classes.
+// We have a main abstract class named Action that is extended by RegularAction, OccasionalAction and
+// RareAction - all with their own implementation of Action.class.
+// @author Daniel Barboza, based off Assignment01 base code from Algonquin Staff
 
-import java.lang.reflect.Field;
+
 /**
-   In this file, you are required to write code for your part Part 3. 
-   The reason for this class is to demonstrate the Action class and subclasses.
-   You must fill an array of action objects (hint: check the sample output file provided for you) with
-   different action activities. A user of this system should be able to input a date of their choice and
-   retrieve an output of all activities that would occur on that date.
+   AllActionTest class demonstrates the Action class and subclasses.
+   We have an array of action objects named actions with different action activities.
+   First, a user is asked for a date to input. This date is checked against all the activities
+   in the action array to see if the action happened on the date that was inputed.
+   If there is a match, the .toString is called on that action description and outputed to the user.
+   
    You should reuse the Action class and RegularAction classes from Part I of your solution
    and then the OccasionalAction and RareAction classes from your Part 2.
+	@author Daniel Barboza, based off Assignment01 base code from Algonquin Staff
 */
 
-// YOUR CODE STARTS HERE!!!
 
 public class AllActionTest
 {
@@ -66,43 +71,8 @@ public class AllActionTest
 		//Prints description of action object from array if action date matches user input
 	   if (actions[i].occursOn(year, month, day)) {
 		   System.out.println(actions[i].toString());
-	   };
+	   }
 	   
-	   
-	   //Reflect
-	   
-//	   Class actionClass = actions[4].getClass();
-//	   
-////	   Field agefield.
-//	   
-////	   String classname = actionClass.getName();
-//	   
-//	 
-//	   
-//	   
-//	   Field[] field = actionClass.getDeclaredFields();
-//	   
-//	   Object value = field[2].getName();
-//	   
-//	   
-	   
-//	   Class aClass = actions[5].getClass();
-	   
-//	   Field[] fields = aClass.getDeclaredFields();
-	   
-//	   for(int t =0; t < fields.length; t++) {
-	   
-//	   Object value = fields[0].get();
-		   
-//	   System.out.println(value);
-////	   }
-//		 
-
-		
-		
-		
-//		System.out.println(value);
-		
 		   
 	   }
 

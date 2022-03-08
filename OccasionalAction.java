@@ -30,7 +30,7 @@ public class OccasionalAction extends Action
 			 */
 			public boolean occursOn(int year, int month, int day) {
 				
-				if (day == super.getDay()) {
+				if (day == super.day) {
 					
 					return true; 
 				}

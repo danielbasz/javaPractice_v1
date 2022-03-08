@@ -32,7 +32,7 @@ public class RareAction extends Action
 
 
 
-		if (day == super.getDay() && month == super.getMonth() && year == super.getYear()) {
+		if (day == super.day && month == super.month && year == super.year) {
 
 			return true; 
 		}
