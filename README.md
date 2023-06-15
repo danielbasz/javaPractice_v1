@@ -1,2 +1,4 @@
-# ASSIGNMENT01
+# JAVA RESEARCH
+
+Some practice code
  
